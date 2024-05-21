@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Recommandations pour "{{ movie }}"</h1>
+<ul class="list-group">
+    {% for rec in recommendations %}
+    <li class="list-group-item">{{ rec }}</li>
+    {% endfor %}
+</ul>
+<a class="btn btn-secondary mt-3" href="{% url 'home' %}">Retour à l'accueil</a>
+{% endblock %}
